@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "ristretto";
+    src:
+      url("/assets/ristretto_pro_bold.woff2") format("woff2"),
+      url("/assets/ristretto_pro_bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "ristretto";
+    src:
+      url("/assets/ristretto_pro.woff2") format("woff2"),
+      url("/assets/ristretto_pro.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @media only screen {
+    main {
+      background-position: bottom right 10%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("/assets/back_hd.jpg");
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px),
+    (min-resolution: 192dpi) and (min-width: 800px),
+    (min-width: 1900px) {
+    main {
+      background-image: url("/assets/back_fd.jpg");
+    }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1900px),
+    (min-resolution: 192dpi) and (min-width: 1900px),
+    (min-width: 3000px) {
+    main {
+      background-image: url("/assets/back_4k.jpg");
+    }
+  }
+}
