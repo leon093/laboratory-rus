@@ -2,13 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.dotline {
+  @apply ml-2 mr-5 flex justify-stretch font-serif text-4xl;
+}
+
+.dotline::before {
+  --tw-content: "•";
+  content: var(--tw-content);
+  @apply -ml-2  text-3xl leading-10;
+  color: rgb(185, 28, 28);
+}
+
+.dotline::after {
+  --tw-content: "•";
+  content: var(--tw-content);
+  @apply -ml-1;
+  color: rgb(185, 28, 28);
+}
+
 @layer base {
   @font-face {
     font-family: "ristretto";
     src:
       url("/assets/ristretto_pro_bold.woff2") format("woff2"),
       url("/assets/ristretto_pro_bold.woff") format("woff");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
   }
 
@@ -17,16 +35,24 @@
     src:
       url("/assets/ristretto_pro.woff2") format("woff2"),
       url("/assets/ristretto_pro.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "ristretto";
+    src:
+      url("/assets/ristretto_pro_light.woff2") format("woff2"),
+      url("/assets/ristretto_pro_light.woff") format("woff");
+    font-weight: 300;
     font-style: normal;
   }
 
   @media only screen {
     main {
-      background-position: bottom right 10%;
-      background-attachment: fixed;
+      background-position: bottom right 45%;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: auto 117%;
       background-image: url("/assets/back_hd.jpg");
     }
   }
