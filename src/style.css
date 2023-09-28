@@ -3,20 +3,23 @@
 @tailwind utilities;
 
 .dotline {
-  @apply ml-2 mr-5 flex justify-stretch font-serif text-4xl;
+  @apply ml-2 mr-5 mt-2 flex justify-stretch font-serif;
 }
 
 .dotline::before {
   --tw-content: "•";
   content: var(--tw-content);
-  @apply -ml-2  text-3xl leading-10;
+
+  @apply -ml-2 text-3xl;
+  line-height: 10px;
   color: rgb(185, 28, 28);
 }
 
 .dotline::after {
   --tw-content: "•";
   content: var(--tw-content);
-  @apply -ml-1;
+  @apply -ml-1 text-4xl;
+  line-height: 10px;
   color: rgb(185, 28, 28);
 }
 
@@ -49,18 +52,30 @@
   }
 
   @media only screen {
-    main {
+    main article.about {
       background-position: bottom right 45%;
       background-repeat: no-repeat;
       background-size: auto 117%;
       background-image: url("/assets/back_hd.jpg");
+    }
+    main article.info {
+      background-position: top right 45%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("/assets/back_2_hd.jpg");
+    }
+    main article.info nav {
+      background-position-x: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("/assets/diz_hd.png");
     }
   }
 
   @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px),
     (min-resolution: 192dpi) and (min-width: 800px),
     (min-width: 1900px) {
-    main {
+    main article.about {
       background-image: url("/assets/back_fd.jpg");
     }
   }
@@ -68,7 +83,7 @@
   @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1900px),
     (min-resolution: 192dpi) and (min-width: 1900px),
     (min-width: 3000px) {
-    main {
+    main article.about {
       background-image: url("/assets/back_4k.jpg");
     }
   }
