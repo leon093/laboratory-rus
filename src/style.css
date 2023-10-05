@@ -24,6 +24,12 @@
 }
 
 @layer base {
+  
+  #map .ya-gray-pane{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
   @font-face {
     font-family: "ristretto";
     src:
@@ -59,7 +65,8 @@
       background-image: url("/assets/back_hd.jpg");
     }
     main article.info {
-      background-position: top right 45%;
+      background-color: #fff;
+      background-position: bottom 20px right 45%;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url("/assets/back_2_hd.jpg");

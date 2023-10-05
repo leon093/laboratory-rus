@@ -11,8 +11,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ["ristretto", ...defaultTheme.fontFamily.sans],
+        copy: ["Arial, Helvetica, sans-serif"],
       },
     },
   },
+  safelist: ['ya-gray-pane'],
   plugins: [],
 };
