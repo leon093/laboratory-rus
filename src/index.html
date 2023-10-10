@@ -15,39 +15,26 @@
     <main class="">
       <!-- #region ARTICLE ABOUT  -->
       <article
-        class="about py-20 flex w-full flex-col lg:flex-row lg:items-start  lg:justify-start px-6 lg:px-16 text-center"
+        class="about py-20 lg:pb-10 flex w-full flex-col lg:flex-row lg:items-start  lg:justify-start px-6 lg:px-16 3xl:pr-44  text-center"
       >
         <!-- #region LOGO -->
-        <div id="logo" class="mb-20 lg:order-1 flex justify-center">
+        <div id="logo" class="mb-20 lg:mb-0 lg:order-1 flex justify-center">
           <img
-            class="w-60 lg:w-[30rem] max-h-full lg:max-h-52"
+            class="w-60 lg:w-[30rem]"
             src="/assets/logo.svg"
             itemprop="logo"
           />
         </div>
         <!-- #endregion -->
 
-        <div class="flex w-full lg:w-auto justify-between lg:justify-end lg:order-3 lg:pt-16">
+        <div class="flex w-full lg:w-auto justify-between lg:justify-end lg:order-3 lg:pt-8">
+          
           <div class="lg:hidden">
             <h1 class="text-4xl font-light">Лаборатория</h1>
-            <div class="dotline h-8 ml-2 mr-5 ">
-              <!-- #region DOt-LINE -->
-              <svg version="1.1" viewBox="0 0 80 10">
-                <defs>
-                <g id="dotline">
-                  <line 
-                  x1="0"
-                  y1="50%"
-                  y2="50%"
-                  x2="100%"
-                  fill="none"
-                  stroke-linecap="round"
-                  vector-effect="non-scaling-stroke"
-                /></g>
-              </defs>
-              <use xlink:href="#dotline"/>
-              </svg>
-              <!-- #endregion -->
+            <div class="dotline mt-2 mr-5">
+              <div class="c"></div>
+              <div class="l"></div>
+              <div class="c"></div>
             </div>
           </div>
           
@@ -79,7 +66,7 @@
                 class="cursor-pointer fill-[#F62221] group-hover:fill-red-500"
               />
               <text
-                class="w-16 cursor-pointer fill-white font-light tracking-wider"
+                class="w-16 cursor-pointer fill-white font-light tracking-wider 2xl:text-xs"
                 text-anchor="middle"
               >
                 <tspan x="52%" y="53%">Фрезерный</tspan>
@@ -91,18 +78,18 @@
         </div>
 
         <!-- #region ADDRESS -->
-        <div class="w-full text-left lg:order-2 lg:-ml-8 lg:mr-8 ">
-          <ul class="fill-zinc-300 text-xl lg:text-base xl:text-xl 3xl:text-2xl lg:flex whitespace-nowrap">
+        <div class="w-full text-left lg:order-2 lg:-ml-7 lg:mr-8 ">
+          <ul class="fill-zinc-300 text-xl lg:text-base xl:text-xl 3xl:text-2xl lg:flex items-center whitespace-nowrap">
             <li class="mb-3">
               <a href="tel:+7-916-263-49-11">
                 <span
-                  class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom inline-block rounded-full bg-zinc-800 text-white/90"
+                  class="mr-4 lg:mr-2 xl:mr-3 align-middle inline-block rounded-full bg-zinc-800 text-white/90"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     stroke-width="1"
-                    class="m-2 w-4 lg:w-3 lg:m-1"
+                    class="m-2 w-4 lg:w-3 lg:m-1 xl:w-4 xl:m-2"
                     title="phone"
                     role="img"
                   >
@@ -116,21 +103,23 @@
             </li>
 
             <li class="hidden lg:inline w-full mb-3">
-              <div class="dotline">
-                <svg version="1.1" viewBox="0 0 80 10"><use xlink:href="#dotline" /></svg>
+              <div class="dotline ml-2 mr-3 xl:ml-5 xl:mr-9 2xl:ml-3 2xl:mr-6 3xl:ml-5 3xl:mr-10">
+                <div class="c"></div>
+                <div class="l"></div>
+                <div class="c"></div>
               </div>
             </li>
 
             <li class="mb-3">
               <a href="mailto:btr-lab@mail.ru">
                 <span
-                  class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom inline-block rounded-full bg-zinc-800 text-white/90"
+                  class="mr-4 lg:mr-2 xl:mr-3 align-middle inline-block rounded-full bg-zinc-800 text-white/90"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     stroke-width="1"
-                    class="m-2 w-4 lg:w-3 lg:m-1"
+                    class="m-2 w-4 lg:w-3 lg:m-1 xl:w-4 xl:m-2"
                     title="email"
                     role="img"
                   >
@@ -147,20 +136,22 @@
             </li>
 
             <li class="hidden lg:inline w-full mb-3">
-              <div class="dotline">
-                <svg version="1.1" viewBox="0 0 80 10"><use xlink:href="#dotline" /></svg>
+              <div class="dotline ml-2 mr-3 xl:ml-5 xl:mr-9 2xl:ml-3 2xl:mr-6 3xl:ml-5 3xl:mr-10">
+                <div class="c"></div>
+                <div class="l"></div>
+                <div class="c"></div>
               </div>
             </li>
 
            <li class="mb-3">
               <span
-                class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom  inline-block rounded-full bg-zinc-800  text-white/90"
+                class="mr-4 align-middle  inline-block rounded-full bg-zinc-800  text-white/90"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   stroke-width="1"
-                  class="m-2 w-4 lg:w-3 lg:m-1"
+                  class="m-2 w-4 lg:w-3 lg:m-1 xl:w-4 xl:m-2"
                   title="location"
                   role="img"
                 >

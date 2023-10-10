@@ -3,51 +3,53 @@
 @tailwind utilities;
 
 @layer components{
-.dotline {
-  @apply  h-full mx-4 lg:ml-4 lg:mr-2 flex justify-stretch font-serif items-center;
-}
-.dotline svg line{
-  stroke-width: .1rem;
-  stroke-dasharray: 4, 9;
- stroke: #F62221;
-}
-
-.dotline::before {
-  --tw-content: "•";
-  content: var(--tw-content);
-  display: inline;
-  margin-top: -0.1rem;
-  margin-left: -0.5rem;
-  font-size: 1.5rem;
-  /* @apply -ml-2 text-3xl lg:text-2xl; */
-  color: #F62221;
-}
-
-.dotline::after {
-  --tw-content: "•";
-  content: var(--tw-content);
-  display: inline;
-  margin-top: -0.1rem;
-  margin-left: -0.25rem;
-  font-size: 2.25rem;
- 
-  /* @apply -ml-1 text-5xl  lg:text-4xl; */
-  color: #F62221;
-} 
-
-@screen lg{ 
-  .dotline svg{
-   width: 100%;
+  .dotline{
+    height: 7px;
+    padding-top: 3px;
+    @apply flex;
   }
-  .dotline::before {
-    margin-top: -0.2rem;
-    font-size: 1rem;
+
+  .dotline .l{   
+    flex-grow: 1;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cline stroke='%23F62221' stroke-width='2' y1='1'  y2='1' x2='100%25' stroke-dasharray='4%2c9' fill='none' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3e%3c/svg%3e");
   }
-  .dotline::after {
-    margin-top: -0.2rem;
-    font-size: 1.5rem;
+  @screen lg{
+    .dotline .l{   
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cline stroke='%23F62221' stroke-width='1' y1='1'  y2='1' x2='100%25' stroke-dasharray='4%2c7' fill='none' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3e%3c/svg%3e");
+    }
   }
-}
+
+  .dotline .c{
+    @apply   border border-[#F62221] bg-[#F62221] rounded-full;
+  }
+
+  .dotline .c:first-child{
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+  }
+  .dotline .c:last-child{
+    width: 7px;
+    height: 7px;
+    margin-top: -3px;
+  }
+  
+  @screen xl{
+    .dotline .l{   
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cline stroke='%23F62221' stroke-width='2' y1='1'  y2='1' x2='100%25' stroke-dasharray='4%2c7' fill='none' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3e%3c/svg%3e");
+    }
+    .dotline .c:first-child{
+      width: 7px;
+      height: 7px;
+      margin-top: -3px;
+    }
+    .dotline .c:last-child{
+      width: 9px;
+      height: 9px;
+      margin-top: -4px;
+    }
+  }
+
 
   #map .ya-gray-pane{
       -webkit-filter: grayscale(100%);
@@ -55,6 +57,7 @@
   }
 
 }
+
 @layer base {
   
    @font-face {
