@@ -7,37 +7,7 @@
     <title>ЛАБОРАТОРИЯ.РУС</title>
     <link href="/style.css" rel="stylesheet" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e22d7c09-ff6c-4417-a684-5bd8ef956fc0" type="text/javascript"></script>
-    <script>
-      ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [56.010136, 37.869056],
-            zoom: 13,
-            controls: ['fullscreenControl','zoomControl']
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemarkWithContent = new ymaps.Placemark(myMap.getCenter(), {
-            balloonContent: 'Адрес',
-        }, {
-
-            iconLayout: 'default#imageWithContent',
-            iconImageHref: '/assets/logo.svg',
-            iconImageSize: [50, 50],
-            iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
-
-    myMap.geoObjects.add(myPlacemarkWithContent);
-    myMap.panes._array.find(p=>p.key=='ground').pane._element.classList.add('ya-gray-pane');
-});
-    </script>
+    <script src="/assets/map.js"></script>
   </head>
   <body
     class="min-w-[320px] overflow-x-hidden bg-gradient-to-b from-slate-50 to-gray-400"
@@ -125,7 +95,7 @@
         <div class="w-full text-left">
           <ul class="fill-zinc-300 text-xl">
             <li class="mb-3">
-              <a href="tel:+79162635911">
+              <a href="tel:+7-916-263-49-11">
                 <span
                   class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
                 >
@@ -142,7 +112,7 @@
                     />
                   </svg>
                 </span>
-                8 (916) 263-49-11
+                +7 (916) 263-49-11
               </a>
             </li>
             <li class="mb-3">
@@ -282,7 +252,7 @@
   
     <ul class="fill-zinc-300 text-xl flex pb-6 gap-8">
       <li class="mb-3">
-        <a href="tel:+79162635911">
+        <a href="tel:+7-916-263-49-11">
           <span
             class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
           >
@@ -299,7 +269,7 @@
               />
             </svg>
           </span>
-          8 (916) 263-49-11
+          +7 (916) 263-49-11
         </a>
       </li>
       <li class="mb-3">

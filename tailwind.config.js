@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
-  content: ["./src/pages/*.html", "./src/index.html"],
+  content: ["./src/pages/*.html", "./src/index.html", "./src/public/assets/map.js"],
   theme: {
     listStyleType: {
       none: "none",

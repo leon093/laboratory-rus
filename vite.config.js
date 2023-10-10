@@ -31,6 +31,7 @@ function pages()  {
 export default defineConfig({
   root,     // set root directory
   base: '/', // base URL for the app, default is '/'
+  
   plugins:[pages()],
   build: {
     emptyOutDir: true,
