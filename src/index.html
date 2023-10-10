@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ЛАБОРАТОРИЯ.РУС</title>
     <link href="/style.css" rel="stylesheet" />
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e22d7c09-ff6c-4417-a684-5bd8ef956fc0" type="text/javascript"></script>
-    <script src="/assets/map.js"></script>
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e22d7c09-ff6c-4417-a684-5bd8ef956fc0" type="text/javascript"></script> -->
+    <!-- <script src="/assets/map.js"></script> -->
   </head>
   <body
     class="min-w-[320px] overflow-x-hidden bg-gradient-to-b from-slate-50 to-gray-400"
@@ -15,44 +15,43 @@
     <main class="">
       <!-- #region ARTICLE ABOUT  -->
       <article
-        class="about flex w-full flex-col items-center justify-center p-7 text-center"
+        class="about py-20 flex w-full flex-col lg:flex-row lg:items-start  lg:justify-start px-6 lg:px-16 text-center"
       >
         <!-- #region LOGO -->
-        <div id="logo">
+        <div id="logo" class="mb-20 lg:order-1 flex justify-center">
           <img
-            class="my-12 max-h-full w-60"
+            class="w-60 lg:w-[30rem] max-h-full lg:max-h-52"
             src="/assets/logo.svg"
             itemprop="logo"
           />
         </div>
         <!-- #endregion -->
 
-        <div class="flex w-full justify-between">
-          <div>
+        <div class="flex w-full lg:w-auto justify-between lg:justify-end lg:order-3 lg:pt-16">
+          <div class="lg:hidden">
             <h1 class="text-4xl font-light">Лаборатория</h1>
-            <div class="dotline">
+            <div class="dotline h-8 ml-2 mr-5 ">
               <!-- #region DOt-LINE -->
-              <svg
-                class="stroke-red-700 leading-4"
-                version="1.1"
-                viewBox="0 0 80 10"
-              >
-                <line
+              <svg version="1.1" viewBox="0 0 80 10">
+                <defs>
+                <g id="dotline">
+                  <line 
                   x1="0"
                   y1="50%"
                   y2="50%"
                   x2="100%"
                   fill="none"
-                  stroke-dasharray="3, 6"
                   stroke-linecap="round"
-                  stroke-width="1px"
-                />
+                  vector-effect="non-scaling-stroke"
+                /></g>
+              </defs>
+              <use xlink:href="#dotline"/>
               </svg>
               <!-- #endregion -->
             </div>
           </div>
-
-          <div class="will-change-transform">
+          
+          <div class="-mr-4">
             <!-- #region NAV-LINK-FREZER -->
             <svg
               class="group w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
@@ -77,7 +76,7 @@
                 width="38"
                 height="3"
                 rx="1.5"
-                class="cursor-pointer fill-red-700 group-hover:fill-red-500"
+                class="cursor-pointer fill-[#F62221] group-hover:fill-red-500"
               />
               <text
                 class="w-16 cursor-pointer fill-white font-light tracking-wider"
@@ -92,18 +91,18 @@
         </div>
 
         <!-- #region ADDRESS -->
-        <div class="w-full text-left">
-          <ul class="fill-zinc-300 text-xl">
+        <div class="w-full text-left lg:order-2 lg:-ml-8 lg:mr-8 ">
+          <ul class="fill-zinc-300 text-xl lg:text-base xl:text-xl 3xl:text-2xl lg:flex whitespace-nowrap">
             <li class="mb-3">
               <a href="tel:+7-916-263-49-11">
                 <span
-                  class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
+                  class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom inline-block rounded-full bg-zinc-800 text-white/90"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     stroke-width="1"
-                    class="m-2 h-4 w-4"
+                    class="m-2 w-4 lg:w-3 lg:m-1"
                     title="phone"
                     role="img"
                   >
@@ -115,16 +114,23 @@
                 +7 (916) 263-49-11
               </a>
             </li>
+
+            <li class="hidden lg:inline w-full mb-3">
+              <div class="dotline">
+                <svg version="1.1" viewBox="0 0 80 10"><use xlink:href="#dotline" /></svg>
+              </div>
+            </li>
+
             <li class="mb-3">
               <a href="mailto:btr-lab@mail.ru">
                 <span
-                  class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
+                  class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom inline-block rounded-full bg-zinc-800 text-white/90"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     stroke-width="1"
-                    class="m-2 h-4 w-4"
+                    class="m-2 w-4 lg:w-3 lg:m-1"
                     title="email"
                     role="img"
                   >
@@ -139,15 +145,22 @@
                 btr-lab@mail.ru
               </a>
             </li>
-            <li class="mb-3">
+
+            <li class="hidden lg:inline w-full mb-3">
+              <div class="dotline">
+                <svg version="1.1" viewBox="0 0 80 10"><use xlink:href="#dotline" /></svg>
+              </div>
+            </li>
+
+           <li class="mb-3">
               <span
-                class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
+                class="mr-4 lg:mr-2  align-bottom lg:align-text-bottom  inline-block rounded-full bg-zinc-800  text-white/90"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   stroke-width="1"
-                  class="m-2 h-4 w-4"
+                  class="m-2 w-4 lg:w-3 lg:m-1"
                   title="location"
                   role="img"
                 >
@@ -245,22 +258,22 @@
       <!-- #endregion -->
     </main>
     <div class="bg-white">
-      <div  id="map" class=" bg-gray-300/80 w-full h-72"></div>
+      <div  id="map" class=" bg-gray-300/80 w-full h-[300px] sm:h-[540px]"></div>
     </div>
 <footer class="bg-white pt-6 px-5 pb-12">
   <hr class="mx-3 mb-6">
   
-    <ul class="fill-zinc-300 text-xl flex pb-6 gap-8">
+    <ul class="fill-zinc-300  min-[340px]:text-lg sm:text-xl 2xl:text-2xl 3xl:text-3xl  flex pb-6 whitespace-nowrap gap-6 xl:gap-14">
       <li class="mb-3">
         <a href="tel:+7-916-263-49-11">
           <span
-            class="mr-4 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
+            class="mr-2 inline-block rounded-full bg-zinc-800 align-bottom text-white/90"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               stroke-width="1"
-              class="m-2 h-4 w-4"
+              class="m-2 w-4 3xl:w-6"
               title="phone"
               role="img"
             >
@@ -281,7 +294,7 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               stroke-width="1"
-              class="m-2 h-4 w-4"
+              class="m-2 w-4 3xl:w-6"
               title="email"
               role="img"
             >

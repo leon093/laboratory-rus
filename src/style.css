@@ -2,35 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
 .dotline {
-  @apply ml-2 mr-5 mt-2 flex justify-stretch font-serif;
+  @apply  h-full mx-4 lg:ml-4 lg:mr-2 flex justify-stretch font-serif items-center;
+}
+.dotline svg line{
+  stroke-width: .1rem;
+  stroke-dasharray: 4, 9;
+ stroke: #F62221;
 }
 
 .dotline::before {
   --tw-content: "•";
   content: var(--tw-content);
-
-  @apply -ml-2 text-3xl;
-  line-height: 10px;
-  color: rgb(185, 28, 28);
+  display: inline;
+  margin-top: -0.1rem;
+  margin-left: -0.5rem;
+  font-size: 1.5rem;
+  /* @apply -ml-2 text-3xl lg:text-2xl; */
+  color: #F62221;
 }
 
 .dotline::after {
   --tw-content: "•";
   content: var(--tw-content);
-  @apply -ml-1 text-4xl;
-  line-height: 10px;
-  color: rgb(185, 28, 28);
+  display: inline;
+  margin-top: -0.1rem;
+  margin-left: -0.25rem;
+  font-size: 2.25rem;
+ 
+  /* @apply -ml-1 text-5xl  lg:text-4xl; */
+  color: #F62221;
+} 
+
+@screen lg{ 
+  .dotline svg{
+   width: 100%;
+  }
+  .dotline::before {
+    margin-top: -0.2rem;
+    font-size: 1rem;
+  }
+  .dotline::after {
+    margin-top: -0.2rem;
+    font-size: 1.5rem;
+  }
 }
 
-@layer base {
-  
   #map .ya-gray-pane{
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
   }
 
-  @font-face {
+}
+@layer base {
+  
+   @font-face {
     font-family: "ristretto";
     src:
       url("/assets/ristretto_pro_bold.woff2") format("woff2"),
@@ -61,7 +88,7 @@
     main article.about {
       background-position: bottom right 45%;
       background-repeat: no-repeat;
-      background-size: auto 117%;
+      background-size: cover;
       background-image: url("/assets/back_hd.jpg");
     }
     main article.info {
@@ -79,17 +106,21 @@
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px),
-    (min-resolution: 192dpi) and (min-width: 800px),
-    (min-width: 1900px) {
+  @screen lg{
+    main article.about {
+    background-position-x: left;
+    }
+  }
+  
+  @media only screen and (min-resolution: 2dppx) and (min-width: theme('screens.lg')),
+  only screen  and (min-width: theme('screens.xl')){
     main article.about {
       background-image: url("/assets/back_fd.jpg");
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1900px),
-    (min-resolution: 192dpi) and (min-width: 1900px),
-    (min-width: 3000px) {
+  @media  only screen and (min-resolution: 2dppx) and (min-width: theme('screens.2xl')),
+  only screen  and (min-width: theme('screens.3xl')){
     main article.about {
       background-image: url("/assets/back_4k.jpg");
     }
