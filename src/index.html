@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- #region ADDRESS -->
-                <div class="w-full text-left lg:order-2 lg:-ml-7 lg:mr-8 lg:relative lg:z-10">
+                <div class="w-full text-left lg:relative lg:z-10 lg:order-2 lg:-ml-7 lg:mr-8">
                     <ul class="items-center whitespace-nowrap fill-zinc-300 text-xl lg:flex lg:text-base xl:text-xl 3xl:text-2xl">
                         <li class="mb-3">
                             <a href="tel:+7-916-263-49-11">
@@ -150,9 +150,11 @@
                     <li>Цифровой протокол</li>
                 </ul>
 
-                <nav class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:right-0 lg:bottom-0 lg:h-full lg:w-[625px] lg:pr-40 lg:pb-20 2xl:pr-16 2xl:text-sm">
+                <nav
+                    class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:bottom-0 lg:right-0 lg:h-full lg:w-[625px] lg:pb-20 lg:pr-40 2xl:pr-16 2xl:text-sm"
+                >
                     <!-- #region NAV-LINK-ZAKAZ -->
-                    <a href="/price-list">
+                    <a href="/pages/order.html">
                         <svg
                             class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
                             version="1.1"
@@ -168,18 +170,21 @@
                     </a>
 
                     <!-- #region NAV-LINK-PRICE -->
-                    <svg
-                        class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
-                        version="1.1"
-                        viewBox="0 0 139 139"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
-                        <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                            <tspan x="50%" y="60%">Прайс-лист</tspan>
-                        </text>
-                    </svg>
+                    <a href="/pages/price-list.html">
+                        <svg
+                            class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
+                            version="1.1"
+                            viewBox="0 0 139 139"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
+                            <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
+                                <tspan x="50%" y="60%">Прайс-лист</tspan>
+                            </text>
+                        </svg>
+                    </a>
                     <!-- #endregion -->
+
                     <!-- #region NAV-LINK-CONTACT -->
                     <svg
                         class="group z-10 -mt-14 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
