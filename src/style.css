@@ -139,6 +139,10 @@
         .price {
             background-image: url("/assets/price.png");
         }
+
+        .menu {
+            background-image: url("/assets/menu.png");
+        }
     }
 
     @media only screen and (min-resolution: 2dppx) and (min-width: theme("screens.lg")), only screen and (min-width: theme("screens.xl")) {
