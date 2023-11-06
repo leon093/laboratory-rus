@@ -72,6 +72,10 @@
     .text-required {
         @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 peer-valid:opacity-0 peer-required:after:content-['*'] peer-required:after:text-[#FF8080];
     }
+
+    .btn {
+        @apply inline-block w-full max-w-[250px] text-center rounded-full bg-[#F62221] py-3 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-[#F62221]/30;
+    }
 }
 
 @layer base {

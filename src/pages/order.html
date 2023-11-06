@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="h-full lg:text-lg">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ЛАБОРАТОРИЯ.РУС - Заказ-наряд</title>
+        <link href="/style.css" rel="stylesheet" />
+    </head>
+
+    <body class="min-w-[320px]">
+        <main class="price flex min-h-screen flex-col">
+            <article class="flex grow px-4 pt-6 lg:relative lg:z-10 lg:max-w-[660px] xl:ml-[160px] xl:max-w-[710px]">
+                <a class="btn m-auto" href="/assets/order.pdf" download>Скачать Заказ-наряд</a>
+            </article>
+
+            <nav
+                class="nav flex flex-col items-end justify-center overflow-clip p-7 text-xl lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[930px] lg:gap-y-6 lg:bg-cover lg:bg-right-top lg:pr-28 2xl:pr-56"
+            >
+                <!-- #region NAV-LINK-ZAKAZ -->
+                <a class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none" href="/price-list">
+                    <svg version="1.1" viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <path
+                                id="svg-nav-link-base"
+                                d="m60.84 15c3.849-6.667 13.47-6.667 17.32 0l42.87 74.25c3.849 6.667-0.963 15-8.661 15h-85.74c-7.698 0-12.51-8.333-8.66-15z"
+                                class="cursor-pointer"
+                            />
+                        </defs>
+
+                        <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
+                        <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
+                            <tspan x="50%" y="60%">Заказ-наряд</tspan>
+                        </text>
+                    </svg>
+                    <!-- #endregion -->
+                </a>
+
+                <!-- #region NAV-LINK-PRICE -->
+                <svg
+                    class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
+                    version="1.1"
+                    viewBox="0 0 139 139"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
+                    <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
+                        <tspan x="50%" y="60%">Прайс-лист</tspan>
+                    </text>
+                </svg>
+                <!-- #endregion -->
+                <!-- #region NAV-LINK-CONTACT -->
+                <svg
+                    class="group z-10 -mt-14 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
+                    version="1.1"
+                    viewBox="0 0 139 139"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
+                    <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
+                        <tspan x="50%" y="60%">Контакты</tspan>
+                    </text>
+                </svg>
+                <!-- #endregion -->
+            </nav>
+        </main>
+    </body>
+</html>
