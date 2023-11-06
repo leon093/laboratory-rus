@@ -74,7 +74,7 @@
     }
 
     .btn {
-        @apply min-w-[250px] inline-block text-center rounded-full bg-[#F62221] py-3 px-6 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-[#F62221]/30;
+        @apply min-w-[250px] inline-block text-center rounded-full bg-[#F62221] hover:bg-[#db0a09] transition active:scale-95 py-3 px-6 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-[#F62221]/30;
     }
 }
 
