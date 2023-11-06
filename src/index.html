@@ -10,7 +10,7 @@
         <!-- <script src="/assets/map.js"></script> -->
     </head>
     <body class="min-w-[320px] overflow-x-hidden bg-gradient-to-b from-slate-50 to-gray-400">
-        <main class="">
+        <main class="relative">
             <!-- #region ARTICLE ABOUT  -->
             <article class="about flex w-full flex-col px-6 py-20 text-center lg:flex-row lg:items-start lg:justify-start lg:px-16 lg:pb-10 3xl:pr-44">
                 <!-- #region LOGO -->
@@ -29,7 +29,7 @@
                         </div>
                     </div>
 
-                    <div class="-mr-4">
+                    <div class="-mr-4 lg:relative lg:z-10">
                         <!-- #region NAV-LINK-FREZER -->
                         <svg
                             class="group w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
@@ -56,7 +56,7 @@
                 </div>
 
                 <!-- #region ADDRESS -->
-                <div class="w-full text-left lg:order-2 lg:-ml-7 lg:mr-8">
+                <div class="w-full text-left lg:order-2 lg:-ml-7 lg:mr-8 lg:relative lg:z-10">
                     <ul class="items-center whitespace-nowrap fill-zinc-300 text-xl lg:flex lg:text-base xl:text-xl 3xl:text-2xl">
                         <li class="mb-3">
                             <a href="tel:+7-916-263-49-11">
@@ -140,8 +140,8 @@
             <!-- #endregion -->
 
             <!-- #region ARTICLE INFO -->
-            <article class="info flex w-full flex-col justify-between">
-                <ul class="ml-3 list-inside list-square p-7 pb-0 pt-16 text-[1.4rem] leading-7 marker:text-base">
+            <article class="info flex w-full flex-col justify-between lg:h-[560px]">
+                <ul class="ml-3 list-inside list-square p-7 pb-0 pt-16 text-[1.4rem] leading-7 marker:text-base lg:my-auto lg:pl-28">
                     <li>Ортодонтия</li>
                     <li>Съемное протезирование</li>
                     <li>Безметалловые конструкции</li>
@@ -150,20 +150,23 @@
                     <li>Цифровой протокол</li>
                 </ul>
 
-                <nav class="flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl">
+                <nav class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:right-0 lg:bottom-0 lg:h-full lg:w-[625px] lg:pr-40 lg:pb-20 2xl:pr-16 2xl:text-sm">
                     <!-- #region NAV-LINK-ZAKAZ -->
-                    <svg
-                        class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
-                        version="1.1"
-                        viewBox="0 0 139 139"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
-                        <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                            <tspan x="50%" y="60%">Заказ-наряд</tspan>
-                        </text>
-                    </svg>
-                    <!-- #endregion -->
+                    <a href="/price-list">
+                        <svg
+                            class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
+                            version="1.1"
+                            viewBox="0 0 139 139"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
+                            <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
+                                <tspan x="50%" y="60%">Заказ-наряд</tspan>
+                            </text>
+                        </svg>
+                        <!-- #endregion -->
+                    </a>
+
                     <!-- #region NAV-LINK-PRICE -->
                     <svg
                         class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"

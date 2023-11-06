@@ -136,6 +136,10 @@
             background-position-x: left;
         }
 
+        main article.info {
+            background-position: left top;
+        }
+
         .price {
             background-image: url("/assets/price.png");
         }
