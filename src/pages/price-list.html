@@ -10,7 +10,7 @@
 
     <body class="min-w-[320px]">
         <main class="price flex min-h-screen flex-col">
-            <article class="grow px-4 pt-6 lg:relative lg:z-10 lg:max-w-[660px] xl:ml-[160px] xl:max-w-[710px] 2xl:max-w-xl 2xl:ml-[80px]">
+            <article class="grow px-4 pt-6 lg:relative lg:z-10 lg:max-w-[660px] xl:ml-[160px] xl:max-w-[710px] 2xl:ml-[80px] 2xl:max-w-xl">
                 <div class="rounded-lg bg-white px-2 py-6 shadow-lg lg:flex lg:h-[calc(100vh_-_27px)] lg:flex-col lg:justify-center lg:bg-transparent lg:shadow-none">
                     <h1 class="mb-5 text-4xl sm:text-7xl">Прайс-лист</h1>
 
@@ -39,7 +39,7 @@
                         </label>
 
                         <div class="flex justify-center lg:col-span-2">
-                            <button class="btn mx-14 mt-3" type="submit">Отправить</button>
+                            <button class="btn mt-3 lg:mx-14" type="submit">Отправить</button>
                         </div>
                     </form>
 
@@ -55,7 +55,12 @@
             >
                 <!-- #region NAV-LINK-ZAKAZ -->
                 <a href="/pages/order.html">
-                    <svg class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none" version="1.1" viewBox="0 0 139 139" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                        class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
+                        version="1.1"
+                        viewBox="0 0 139 139"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
                         <defs>
                             <path
                                 id="svg-nav-link-base"
@@ -66,7 +71,8 @@
 
                         <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
                         <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                            <tspan x="50%" y="60%">Заказ-наряд</tspan>
+                            <tspan x="50%" y="48%">Заказ-</tspan>
+                            <tspan x="49%" dy="16%">наряд</tspan>
                         </text>
                     </svg>
                     <!-- #endregion -->
@@ -81,7 +87,8 @@
                 >
                     <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
                     <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                        <tspan x="50%" y="60%">Наши услуги</tspan>
+                        <tspan x="50%" y="48%">Наши</tspan>
+                        <tspan x="49%" dy="16%">услуги</tspan>
                     </text>
                 </svg>
                 <!-- #endregion -->
