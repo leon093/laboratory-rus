@@ -30,28 +30,30 @@
                     </div>
 
                     <div class="-mr-4 lg:relative lg:z-10">
-                        <!-- #region NAV-LINK-FREZER -->
-                        <svg
-                            class="group w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
-                            version="1.1"
-                            viewBox="0 0 139 139"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <defs>
-                                <path
-                                    id="svg-nav-link-base"
-                                    d="m60.84 15c3.849-6.667 13.47-6.667 17.32 0l42.87 74.25c3.849 6.667-0.963 15-8.661 15h-85.74c-7.698 0-12.51-8.333-8.66-15z"
-                                    class="cursor-pointer"
-                                />
-                            </defs>
-                            <use href="#svg-nav-link-base" class="fill-zinc-800 group-hover:fill-zinc-800/95 group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.8)]" />
-                            <rect x="50" y="53" width="38" height="3" rx="1.5" class="cursor-pointer fill-[#F62221] group-hover:fill-red-500" />
-                            <text class="w-16 cursor-pointer fill-white font-light tracking-wider 2xl:text-xs" text-anchor="middle">
-                                <tspan x="52%" y="53%">Фрезерный</tspan>
-                                <tspan x="52%" dy="14%">центр</tspan>
-                            </text>
-                        </svg>
-                        <!-- #endregion -->
+                        <a href="/pages/frezer.html">
+                            <!-- #region NAV-LINK-FREZER -->
+                            <svg
+                                class="group w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
+                                version="1.1"
+                                viewBox="0 0 139 139"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <defs>
+                                    <path
+                                        id="svg-nav-link-base"
+                                        d="m60.84 15c3.849-6.667 13.47-6.667 17.32 0l42.87 74.25c3.849 6.667-0.963 15-8.661 15h-85.74c-7.698 0-12.51-8.333-8.66-15z"
+                                        class="cursor-pointer"
+                                    />
+                                </defs>
+                                <use href="#svg-nav-link-base" class="fill-zinc-800 group-hover:fill-zinc-800/95 group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.8)]" />
+                                <rect x="50" y="53" width="38" height="3" rx="1.5" class="cursor-pointer fill-[#F62221] group-hover:fill-red-500" />
+                                <text class="w-16 cursor-pointer fill-white font-light tracking-wider 2xl:text-xs" text-anchor="middle">
+                                    <tspan x="52%" y="53%">Фрезерный</tspan>
+                                    <tspan x="52%" dy="14%">центр</tspan>
+                                </text>
+                            </svg>
+                            <!-- #endregion -->
+                        </a>
                     </div>
                 </div>
 
@@ -141,14 +143,16 @@
 
             <!-- #region ARTICLE INFO -->
             <article class="info flex w-full flex-col justify-between lg:h-[560px]">
-                <ul class="ml-3 list-inside list-square p-7 pb-0 pt-16 text-[1.4rem] leading-7 marker:text-base lg:my-auto lg:pl-28">
-                    <li>Ортодонтия</li>
-                    <li>Съемное протезирование</li>
-                    <li>Безметалловые конструкции</li>
-                    <li>Металлокерамика на SLM-каркасах</li>
-                    <li>Работа на имплантах</li>
-                    <li>Цифровой протокол</li>
-                </ul>
+                <div class="relative z-10 ml-3 p-7 pb-0 pt-16 text-[1.4rem] leading-7 lg:my-auto lg:pl-28">
+                    <ul class="mb-5 list-inside list-square marker:text-base">
+                        <li>Ортодонтия</li>
+                        <li>Съемное протезирование</li>
+                        <li>Безметалловые конструкции</li>
+                        <li>Металлокерамика на SLM-каркасах</li>
+                        <li>Работа на имплантах</li>
+                        <li>Цифровой протокол</li>
+                    </ul>
+                </div>
 
                 <nav
                     class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:bottom-0 lg:right-0 lg:h-full lg:w-[625px] lg:pb-20 lg:pr-40 2xl:pr-16 2xl:text-sm"
