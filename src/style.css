@@ -20,7 +20,7 @@
     }
 
     .dotline .c {
-        @apply rounded-full border border-[#F62221] bg-[#F62221];
+        @apply rounded-full border border-primary-600 bg-primary-600;
     }
 
     .dotline .c:first-child {
@@ -55,26 +55,27 @@
         filter: grayscale(100%);
     }
 
+    .user-icon,
+    .email-icon {
+        @apply block w-[22px] bg-primary-600;
+    } 
+
     .user-icon {
-        background: url("/assets/user.svg") no-repeat center ;
-        display: block;
-        width: 22px;
-        height: 19px;
+        mask: url("/assets/user.svg") no-repeat center;
+        @apply h-[19px];
     }
 
     .email-icon {
-        background: url("/assets/email.svg") no-repeat;
-        display: block;
-        width: 22px;
-        height: 18px;
+        mask: url("/assets/email.svg") no-repeat;
+        @apply h-[18px];
     }
 
     .text-required {
-        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 peer-valid:opacity-0 peer-required:after:content-['*'] peer-required:after:text-[#FF8080];
+        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 peer-valid:opacity-0 peer-required:after:content-['*'] peer-required:after:text-primary-400;
     }
 
     .btn {
-        @apply min-w-[250px] inline-block text-center rounded-full bg-[#F62221] hover:bg-[#db0a09] transition active:scale-95 py-3 px-6 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-[#F62221]/30;
+        @apply min-w-[250px] inline-block text-center rounded-full bg-primary-600 hover:bg-primary-700 transition active:scale-95 py-3 px-6 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-primary-500/30;
     }
 }
 
