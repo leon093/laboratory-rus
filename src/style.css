@@ -71,7 +71,7 @@
     }
 
     .text-required {
-        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 opacity-0 peer-required:after:content-['*'] peer-required:after:text-primary-400;
+        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit opacity-0 transition-opacity duration-200 peer-required:after:text-primary-400 peer-required:after:content-['*'];
     }
 
     input:placeholder-shown + .text-required {
@@ -79,11 +79,27 @@
     }
 
     .btn {
-        @apply min-w-[250px] inline-block text-center rounded-full bg-primary-600 hover:bg-primary-700 transition active:scale-95 py-3 px-6 text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-primary-500/30;
+        @apply inline-block min-w-[250px] rounded-full bg-primary-600 px-6 py-3 text-center text-lg font-bold tracking-[0.9px] text-white shadow-xl shadow-primary-500/30 transition hover:bg-primary-700 active:scale-95;
     }
+
+    @keyframes fadeInAnimation {
+        from {
+           opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
 }
 
 @layer base {
+    body {
+        animation: fadeInAnimation ease-in-out 800ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
     @font-face {
         font-family: "ristretto";
         src:
