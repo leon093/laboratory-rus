@@ -117,7 +117,7 @@
         }
 
         .about-black {
-            background: url("/assets/back_black_hd.jpg") no-repeat left top / cover;
+            background: url("/assets/back_black_mobile.jpg") no-repeat left bottom / cover;
         }
 
         main article.info {
@@ -129,7 +129,7 @@
         }
 
         .info-black {
-            background: url("/assets/back_2_black_hd.jpg") no-repeat left top / cover;
+            background: url("/assets/back_2_black_mobile.jpg") no-repeat left top / cover;
         }
 
         .nav,
@@ -147,14 +147,20 @@
     }
 
     @screen lg {
-        main article.about,
-        .about-bg-black {
+        main article.about {
             background-position-x: left;
         }
 
-        main article.info,
-        .info-bg-black {
+        main article.info {
             background-position: left top 10%;
+        }
+
+        .about-black {
+            background-image: url("/assets/back_black_hd.jpg");
+        }
+
+        .info-black {
+            background-image: url("/assets/back_2_black_hd.jpg");
         }
 
         .price {
