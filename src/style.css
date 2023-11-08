@@ -71,7 +71,11 @@
     }
 
     .text-required {
-        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 peer-valid:opacity-0 peer-required:after:content-['*'] peer-required:after:text-primary-400;
+        @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit transition-opacity duration-200 opacity-0 peer-required:after:content-['*'] peer-required:after:text-primary-400;
+    }
+
+    input:placeholder-shown + .text-required {
+        @apply opacity-100;
     }
 
     .btn {
