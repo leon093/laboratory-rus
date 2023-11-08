@@ -109,21 +109,27 @@
 
     @media only screen {
         .price,
-        .about,
-        .about-bg-black {
+        .about {
             background-position: bottom right 45%;
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url("/assets/back_hd.jpg");
         }
 
-        main article.info,
-        .info-bg-black {
+        .about-black {
+            background: url("/assets/back_black_hd.jpg") no-repeat left top / cover;
+        }
+
+        main article.info {
             background-color: #fff;
             background-position: bottom 20px right 45%;
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url("/assets/back_2_hd.jpg");
+        }
+
+        .info-black {
+            background: url("/assets/back_2_black_hd.jpg") no-repeat left top / cover;
         }
 
         .nav,
