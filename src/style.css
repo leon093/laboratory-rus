@@ -98,6 +98,7 @@
         animation: fadeInAnimation ease-in-out 800ms;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
+        -webkit-tap-highlight-color: transparent;
     }
 
     @font-face {
