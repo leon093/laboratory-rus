@@ -16,6 +16,7 @@
 
         <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e22d7c09-ff6c-4417-a684-5bd8ef956fc0" type="text/javascript"></script> -->
         <!-- <script src="/assets/map.js"></script> -->
+        <script defer src="/assets/tabs.js"></script>
     </head>
     <body class="min-w-[320px] overflow-x-hidden bg-gradient-to-b from-slate-50 to-gray-400">
         <main class="relative">
@@ -151,8 +152,9 @@
 
             <!-- #region ARTICLE INFO -->
             <article class="info flex w-full flex-col justify-between lg:h-[560px]">
+
                 <div class="relative z-10 ml-3 p-7 pb-0 pt-16 text-[1.4rem] leading-7 lg:my-auto lg:pl-28">
-                    <ul class="mb-5 list-inside list-square marker:text-base">
+                    <ul class="mb-5 list-inside list-square marker:text-base js-tab-content">
                         <li>Ортодонтия</li>
                         <li>Съемное протезирование</li>
                         <li>Безметалловые конструкции</li>
@@ -160,13 +162,25 @@
                         <li>Работа на имплантах</li>
                         <li>Цифровой протокол</li>
                     </ul>
+
+                    <div class="js-tab-content hidden">
+                        <a class="btn m-auto" href="/assets/order.pdf" download>Скачать Заказ-наряд</a>
+                    </div>
+
+                    <div class="js-tab-content hidden">
+                        Форма
+                    </div>
+
+                    <div class="js-tab-content hidden">
+                        Контакты
+                    </div>
                 </div>
 
                 <nav
                     class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:bottom-0 lg:right-0 lg:h-full lg:w-[625px] lg:pb-20 lg:pr-40 2xl:pr-16 2xl:text-sm"
                 >
                     <!-- #region NAV-LINK-ZAKAZ -->
-                    <a class="relative z-10" href="/pages/order.html">
+                    <a class="relative z-10 js-tab-btn" href="/pages/order.html">
                         <svg
                             class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
                             version="1.1"
@@ -175,15 +189,15 @@
                         >
                             <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
                             <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                                <tspan x="50%" y="48%">Заказ-</tspan>
-                                <tspan x="49%" dy="16%">наряд</tspan>
+                                <tspan x="50%" y="48%" class="js-text">Заказ-</tspan>
+                                <tspan x="49%" dy="16%" class="js-text">наряд</tspan>
                             </text>
                         </svg>
                         <!-- #endregion -->
                     </a>
 
                     <!-- #region NAV-LINK-PRICE -->
-                    <a class="relative z-10" href="/pages/price-list.html">
+                    <a class="relative z-10 js-tab-btn" href="/pages/price-list.html">
                         <svg
                             class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
                             version="1.1"
@@ -192,15 +206,15 @@
                         >
                             <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
                             <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                                <tspan x="50%" y="48%">Прайс-</tspan>
-                                <tspan x="49%" dy="16%">лист</tspan>
+                                <tspan x="50%" y="48%" class="js-text">Прайс-</tspan>
+                                <tspan x="49%" dy="16%" class="js-text">лист</tspan>
                             </text>
                         </svg>
                     </a>
                     <!-- #endregion -->
 
                     <!-- #region NAV-LINK-CONTACT -->
-                    <a class="relative z-10" href="/pages/contacts.html">
+                    <a class="relative z-10 js-tab-btn" href="/pages/contacts.html">
                         <svg
                             class="group z-10 -mt-14 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
                             version="1.1"
@@ -209,7 +223,7 @@
                         >
                             <use href="#svg-nav-link-base" class="fill-white drop-shadow-[0_6px_4px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_6px_4px_rgba(0,0,0,0.4)]" />
                             <text class="cursor-pointer fill-zinc-950 font-normal" text-anchor="middle">
-                                <tspan x="50%" y="60%">Контакты</tspan>
+                                <tspan x="50%" y="60%" class="js-text">Контакты</tspan>
                             </text>
                         </svg>
                     </a>
