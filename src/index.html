@@ -152,9 +152,8 @@
 
             <!-- #region ARTICLE INFO -->
             <article class="info flex w-full flex-col justify-between lg:h-[560px]">
-
                 <div class="relative z-10 ml-3 p-7 pb-0 pt-16 text-[1.4rem] leading-7 lg:my-auto lg:pl-28">
-                    <ul class="mb-5 list-inside list-square marker:text-base js-tab-content">
+                    <ul class="js-tab-content mb-5 list-inside list-square marker:text-base">
                         <li>Ортодонтия</li>
                         <li>Съемное протезирование</li>
                         <li>Безметалловые конструкции</li>
@@ -168,19 +167,54 @@
                     </div>
 
                     <div class="js-tab-content hidden">
-                        Форма
+                        <div
+                            class="rounded-lg bg-white px-2 py-6 shadow-lg lg:flex lg:h-[calc(100vh_-_27px)] lg:flex-col lg:justify-center lg:bg-transparent lg:shadow-none xl:h-[calc(100vh_-_36px)]"
+                        >
+                            <h1 class="mb-5 text-4xl sm:text-7xl">Прайс-лист</h1>
+
+                            <form class="mb-7 grid gap-4 text-lg text-[#7B7B7B] lg:grid-cols-2 lg:text-xl" action="">
+                                <label class="relative">
+                                    <i class="user-icon absolute bottom-0 left-7 top-0 my-auto"></i>
+                                    <input class="peer h-14 w-full rounded-lg bg-[#F5F5F5] pl-16 pr-3" type="text" name="name" required autofocus placeholder="" />
+                                    <span class="text-required">Ваше имя</span>
+                                </label>
+
+                                <label class="relative">
+                                    <i class="user-icon absolute bottom-0 left-7 top-0 my-auto"></i>
+                                    <input class="peer h-14 w-full rounded-lg bg-[#F5F5F5] pl-16 pr-3" type="text" name="organization" required placeholder="" />
+                                    <span class="text-required">Наименование организации</span>
+                                </label>
+
+                                <label class="relative">
+                                    <i class="email-icon absolute bottom-0 left-7 top-0 my-auto"></i>
+                                    <input class="peer h-14 w-full rounded-lg bg-[#F5F5F5] pl-16 pr-3" type="email" name="email" required placeholder="" />
+                                    <span class="text-required">Ваш e-mail</span>
+                                </label>
+
+                                <label class="relative mb-4 lg:mb-0">
+                                    <input class="h-14 w-full rounded-lg bg-[#F5F5F5] pl-7 pr-3" type="number" name="inn" placeholder="ИНН" />
+                                </label>
+
+                                <div class="flex justify-center lg:col-span-2">
+                                    <button class="btn mt-3 lg:mx-14" type="submit">Отправить</button>
+                                </div>
+                            </form>
+
+                            <p class="text-xs text-[#7B7B7B] [text-wrap:pretty]">
+                                * Отправляя персональные данные из данной формы, я подтверждаю свое согласие на обработку персональных данных и соглашаюсь на
+                                <a class="underline" href="/pact">политику конфиденциальности</a>
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="js-tab-content hidden">
-                        Контакты
-                    </div>
+                    <div class="js-tab-content hidden">Контакты</div>
                 </div>
 
                 <nav
                     class="nav flex max-w-full flex-col items-end justify-end overflow-clip p-7 text-xl lg:absolute lg:bottom-0 lg:right-0 lg:h-full lg:w-[625px] lg:pb-20 lg:pr-40 2xl:pr-16 2xl:text-sm"
                 >
                     <!-- #region NAV-LINK-ZAKAZ -->
-                    <a class="relative z-10 js-tab-btn" href="/pages/order.html">
+                    <a class="js-tab-btn relative z-10" href="/pages/order.html">
                         <svg
                             class="group z-10 mt-2 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem] focus:outline-none"
                             version="1.1"
@@ -197,7 +231,7 @@
                     </a>
 
                     <!-- #region NAV-LINK-PRICE -->
-                    <a class="relative z-10 js-tab-btn" href="/pages/price-list.html">
+                    <a class="js-tab-btn relative z-10" href="/pages/price-list.html">
                         <svg
                             class="group z-10 -mt-10 mr-28 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
                             version="1.1"
@@ -214,7 +248,7 @@
                     <!-- #endregion -->
 
                     <!-- #region NAV-LINK-CONTACT -->
-                    <a class="relative z-10 js-tab-btn" href="/pages/contacts.html">
+                    <a class="js-tab-btn relative z-10" href="/pages/contacts.html">
                         <svg
                             class="group z-10 -mt-14 w-32 transition-all hover:-translate-x-[0.05rem] hover:-translate-y-[0.05rem]"
                             version="1.1"
