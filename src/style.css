@@ -70,6 +70,11 @@
         @apply h-[18px];
     }
 
+    .close-icon {
+        mask: url("/assets/close.svg") no-repeat;
+        @apply block h-4 w-4 bg-black;
+    }
+
     .text-required {
         @apply pointer-events-none absolute bottom-0 left-16 top-0 my-auto h-fit opacity-0 transition-opacity duration-200 peer-required:after:text-primary-400 peer-required:after:content-['*'];
     }
@@ -84,13 +89,21 @@
 
     @keyframes fadeInAnimation {
         from {
-           opacity: 0;
+            opacity: 0;
         }
         to {
             opacity: 1;
         }
     }
 
+    @keyframes show {
+        from {
+            transform: translateY(-10px);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
 }
 
 @layer base {
@@ -99,6 +112,20 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    dialog {
+        background: transparent;
+        appearance: none;
+    }
+
+    dialog[open] {
+        animation: show 0.5s;
+    }
+
+    dialog[open]::backdrop {
+        animation: fadeInAnimation 0.5s;
+        background: rgba(0, 0, 0, 0.5);
     }
 
     @font-face {
@@ -162,7 +189,6 @@
         }
 
         .nav-black {
-            /* background-image: url("/assets/diz_black_sm.png"); */
             background-image: url("/assets/diz_black_big.png");
         }
     }
